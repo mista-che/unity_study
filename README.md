@@ -1,1 +1,1 @@
-This repository accompanies a test of github and unity functionalities.
+This repository was made to try out using github with unity.
