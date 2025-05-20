@@ -1,0 +1,5 @@
+2025-05-20
+- Added very crude WASD movement to Unity via editing the transform positions
+- Learned about value types vs reference types in C#
+- Tested difference in class vs struct types
+- Initialized git repo and created this log
