@@ -3,3 +3,16 @@
 - Learned about value types vs reference types in C#
 - Tested difference in class vs struct types
 - Initialized git repo and created this log
+
+2025-05-21
+- Messed around with Arrays and Lists; arrays have static position assignments, while lists have dynamic position assignments.
+- Messed around with instance fields.
+  - public variables are accessible by all classes, but should be avoided because variable names being available everywhere.
+  - private variables require alternative access (i.e. methods)
+  - Unity serialization. Unity holds on to variable values in between each script reload, which happens when editing scripts (and other times)
+  - [SerializeField] forces Unity to serialize private variables. [note: whether or not Unity serializes things by default depends on variable type, but public/private is a good enough framework for now.]
+    - [System.Nonserialized] does the opposite for public variables.
+- Messed around with Unity components (things added on to an Object, like Transform (position), textures, lightning, etc.)
+  - 2D/3D objects are just regular objects with preset components.
+- Messed around with calling scripts (Monobehavior classes) and GameObjects within a script.
+  - Aforementioned serialization can be used here; can call Unity objects into scripts via using a serialized field and the Unity inspector window.
