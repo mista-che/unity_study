@@ -18,16 +18,22 @@
   - Aforementioned serialization can be used here; can call Unity objects into scripts via using a serialized field and the Unity inspector window.
 
 2025-05-21
- - Messed around with FindObjectWithTag & assigning tags in the Unity Inspector.
- - Messed around with accessing parent and child objects from within a script.
- - Learned that Unity uses Quaternion rotations instead of Euler rotations.
-   - Look into 3blue1brown video to understand ?
- - quick note: $ denotes StringFormat(), ^ denotes "last element in array" -> does not work on parent/child methods.
-   - ^ the reason we use this is to avoid string concatenation, which is less optimal
- - The basic objects in the 3D object dropdown are called "PrimitiveObjects."
-   - They have preset components (which we can add in scripts), and can be created wholesale with a Unity method.
- - Messed around with methods, parameters, arguments, and return values.
-   - Used it to create and destroy objects, as well as attach death notifications to them via OnDestroy().
-   - Attach said OnDestroy() methods to prefabs so that they can be used on each instance.
- - Learned about the legacy InputSystem, which has a number of default parameters (axes, speed, deadspace, etc.)
-   - Be very careful of typos in Axis names.
+- Messed around with FindObjectWithTag & assigning tags in the Unity Inspector.
+- Messed around with accessing parent and child objects from within a script.
+- Learned that Unity uses Quaternion rotations instead of Euler rotations.
+  - Look into 3blue1brown video to understand ?
+- quick note: $ denotes StringFormat(), ^ denotes "last element in array" -> does not work on parent/child methods.
+  - ^ the reason we use this is to avoid string concatenation, which is less optimal
+- The basic objects in the 3D object dropdown are called "PrimitiveObjects."
+  - They have preset components (which we can add in scripts), and can be created wholesale with a Unity method.
+- Messed around with methods, parameters, arguments, and return values.
+  - Used it to create and destroy objects, as well as attach death notifications to them via OnDestroy().
+  - Attach said OnDestroy() methods to prefabs so that they can be used on each instance.
+- Learned about the legacy InputSystem, which has a number of default parameters (axes, speed, deadspace, etc.)
+  - Be very careful of typos in Axis names.
+
+2025-05-26
+- [250526/Roulette/RouletteController.cs] Made a spinny roulette that starts & slows to a stop on separate button presses
+- [PolygonTest.cs] Created a 3D object using code (vertex+triangles->mesh, mesh->meshfilter, meshrenderer)
+- [TransformTest.cs] Learned about global vs local transformation, rotation, and scaling
+- [EventOrder.cs] Tested out the operating order of Unity's default functions (awake, start, update, etc.) and reviewed C# operators
