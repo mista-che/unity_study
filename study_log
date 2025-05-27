@@ -17,7 +17,7 @@
 - Messed around with calling scripts (Monobehavior classes) and GameObjects within a script.
   - Aforementioned serialization can be used here; can call Unity objects into scripts via using a serialized field and the Unity inspector window.
 
-2025-05-21
+2025-05-22
 - Messed around with FindObjectWithTag & assigning tags in the Unity Inspector.
 - Messed around with accessing parent and child objects from within a script.
 - Learned that Unity uses Quaternion rotations instead of Euler rotations.
@@ -33,7 +33,19 @@
   - Be very careful of typos in Axis names.
 
 2025-05-26
-- [250526/Roulette/RouletteController.cs] Made a spinny roulette that starts & slows to a stop on separate button presses
+- [Roulette/RouletteController.cs] Made a spinny roulette that starts & slows to a stop on separate button presses
 - [PolygonTest.cs] Created a 3D object using code (vertex+triangles->mesh, mesh->meshfilter, meshrenderer)
 - [TransformTest.cs] Learned about global vs local transformation, rotation, and scaling
 - [EventOrder.cs] Tested out the operating order of Unity's default functions (awake, start, update, etc.) and reviewed C# operators
+
+2025-05-27
+- [Cat/LoopingBackground_Transform.cs, Cat/InfiniteBG.unity] Made an infinitely scrolling background using 2 images and moving them when they scrolled too far.
+  - This created a slight tearing issue caused by the interaction between setting a specific value threshhold for resetting the image & using deltaTime to scroll the image.
+  - Covered somewhat by making the images slightly bigger than the threshhold.
+- Previewed bit shifting, which can be useful for calculating object states and raycasts.
+- Reviewed if statements.
+- [MaterialTest.cs, Material.unity] Created a fully textured object using assets, and reviewed each individual components (surface type, render face, normal map, height map, height map, ambient occlusion).
+  - Also tried out manipulating components and colors using code rather than in the editor.
+- [Cat/CatWalk.unity, Cat/LoopingBackground_MaterialOffset.cs] Used the material's tiling and offset to create another infinitely scrolling background.
+  - Takes advantage of unity's repeat tiling feature and simply adjusts an offset instead of moving an image.
+  - Also, created animations using the assets to make it look like all components are moving.
