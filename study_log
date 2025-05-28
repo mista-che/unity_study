@@ -49,3 +49,12 @@
 - [Cat/CatWalk.unity, Cat/LoopingBackground_MaterialOffset.cs] Used the material's tiling and offset to create another infinitely scrolling background.
   - Takes advantage of unity's repeat tiling feature and simply adjusts an offset instead of moving an image.
   - Also, created animations using the assets to make it look like all components are moving.
+
+2025-05-28
+- [CatCollider2D.unity, Rigidbody3D.unity, CollisionEvent2D.cs, CollisonEvent3D.cs] Created and messed around with Rigidbody (physics), Colliders (collision checks), and physics materials (bounciness/friction).
+  - Colliders stop Rigidbody movement by default, even if the object being collided with doesn't have a Rigidbody of its own.
+  - Colliders can be set to trigger mode (creates invisible colliders that flag events, but allow movement).
+- [Cat.unity - probably going to be renamed soon]
+  - Implemented a short game consisting of: a pipe respawning at a random height that can push the player character (cat) past its X position off the map.
+  - [FailState_Collision.cs, CatController.cs] Cat can double jump and respawns when pushed off the map by a pipe.
+  - Pipe resets when cat does. Needed to pass a reference to the pipe to the cat, is this optimal, or is there a better way to do that?
