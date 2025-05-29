@@ -58,3 +58,10 @@
   - Implemented a short game consisting of: a pipe respawning at a random height that can push the player character (cat) past its X position off the map.
   - [FailState_Collision.cs, CatController.cs] Cat can double jump and respawns when pushed off the map by a pipe.
   - Pipe resets when cat does. Needed to pass a reference to the pipe to the cat, is this optimal, or is there a better way to do that?
+
+2025-05-29
+- [Pinball.unity, PinballBumpers.cs] Created a simple 2D pinball game using colliders, 2D hinges, and physics materials.
+  - Implemented a 3D texture onto the 2D ball to differentiate it from the other flat assets.
+    - Was looking into a way to make the object emit light before I stopped.
+- [AnimatedDoor.unity, DoorEvent.cs] Created a 3D animation for a scifi door asset.
+  - Messed around with states in the animator to make the door open and close on a collider trigger.
