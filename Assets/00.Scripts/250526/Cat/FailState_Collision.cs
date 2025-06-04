@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FailState_Collision : MonoBehaviour
@@ -33,7 +34,7 @@ public class FailState_Collision : MonoBehaviour
             y_position = RandomY();
             return_position = new Vector3(x_position, y_position, z_position);
             transform.position = return_position;
-            x_position = 11f + (y_position / 2f);
+            x_position = 11f + (Mathf.Abs(y_position));
         }
     }
 

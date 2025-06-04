@@ -12,7 +12,7 @@ public class DoorEvent : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            animator.SetTrigger("Open");
+            animator.SetTrigger("Open") ;
         }
     }
 }
