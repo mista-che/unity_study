@@ -65,3 +65,12 @@
     - Was looking into a way to make the object emit light before I stopped.
 - [AnimatedDoor.unity, DoorEvent.cs] Created a 3D animation for a scifi door asset.
   - Messed around with states in the animator to make the door open and close on a collider trigger.
+
+2025-06-04
+- [CatAnim.unity, SoundManager.cs] Added sounds to our jumping cat scene.
+- Also added UI elements, including a nametag for the cat and a title screen with a button to start the game.
+  - note: When using Korean text, make sure the font you're using supports all characters.
+    - Some Korean font sets don't contain odd characters like 쀍 or special characters using the hanja button.
+  - Title screen button uses a simple setActive true/false trigger.
+- Adjusted the pipe spawn locations so that the presence of the title screen doesn't make the first pipe unreactable.
+- Also learned how to animate UI elements (like using a simple resize effect on text).
