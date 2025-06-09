@@ -48,6 +48,10 @@ public class CatController : MonoBehaviour
         {
             ResetCat();
         }
+
+        var cat_rotation = transform.eulerAngles;
+        cat_rotation.z = cat_rigidbody.linearVelocityY * 3f;
+        this.transform.eulerAngles = cat_rotation;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
