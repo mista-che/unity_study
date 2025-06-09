@@ -74,3 +74,9 @@
   - Title screen button uses a simple setActive true/false trigger.
 - Adjusted the pipe spawn locations so that the presence of the title screen doesn't make the first pipe unreactable.
 - Also learned how to animate UI elements (like using a simple resize effect on text).
+
+2025-06-09
+- Reviewed various looping structures (while, for), conditional structures (Enum, switch), and others (co-routines)
+- [CatAnim.unity, CatOffset.cs] Added rotation to cat jump to simulate up/down velocity, then added a script to keep the text from rotating with the cat.
+- [FadeRoutine.cs] Used a co-routine to slowly fade the screen in and out.
+- [Playtime.cs] Used a script to keep track of elapsed time and display it to an element on the screen.
