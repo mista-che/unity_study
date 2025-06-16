@@ -80,3 +80,19 @@
 - [CatAnim.unity, CatOffset.cs] Added rotation to cat jump to simulate up/down velocity, then added a script to keep the text from rotating with the cat.
 - [FadeRoutine.cs] Used a co-routine to slowly fade the screen in and out.
 - [Playtime.cs] Used a script to keep track of elapsed time and display it to an element on the screen.
+
+2025-06-10
+- Added elements to the cat game.
+
+2025-06-11
+- Used render textures to add videos to Unity.
+
+2025-06-12
+- Used the Random.math function and Lists. Made a lottery simulator with said numbers.
+
+2025-06-13
+- Studied type casting, first with basic types, then creating various classes of objects that could be used in an actual game.
+
+2025-06-16
+- Reviewed type casting.
+- Studied how methods work and can be implemented, using inheritance from classes (abstract, virtual, override) and interfaces.
