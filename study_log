@@ -96,3 +96,11 @@
 2025-06-16
 - Reviewed type casting.
 - Studied how methods work and can be implemented, using inheritance from classes (abstract, virtual, override) and interfaces.
+
+2025-06-24
+- Created a 2D platformer-ish game using a freeware sprite.
+ - Reviewed how to assign inputs and behaviors with keyboard controls, then learned about how to create a touchscreen-based movement environment (virtual joystick).
+
+2025-06-25
+- Created a 2D platformer-ish game using a freeware sprite.
+ - Used Unity's blend tree function to attach attack, attack combo, jump, fall, run, crouch, and crouch walk animations to the joystick made previously.
