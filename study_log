@@ -97,10 +97,16 @@
 - Reviewed type casting.
 - Studied how methods work and can be implemented, using inheritance from classes (abstract, virtual, override) and interfaces.
 
-2025-06-24
+2025-06-23
 - Created a 2D platformer-ish game using a freeware sprite.
  - Reviewed how to assign inputs and behaviors with keyboard controls, then learned about how to create a touchscreen-based movement environment (virtual joystick).
 
-2025-06-25
+2025-06-24
 - Created a 2D platformer-ish game using a freeware sprite.
  - Used Unity's blend tree function to attach attack, attack combo, jump, fall, run, crouch, and crouch walk animations to the joystick made previously.
+
+2025-06-25
+- Created a top-down 'town' map for our 2D platformer.
+ - Used free pixel assets and TileMaps to create a town to walk around in.
+ - Learned about Composite Colliders. Composite Colliders merge with Tilemap Colliders to create custom shapes that update with changes made to the tilemap.
+ - Implemented our Joystick functions (crouch, attack) to our Keyboard knight.

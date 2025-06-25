@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,8 @@ public class KnightMovement_Joystick : MonoBehaviour
     [SerializeField] float crouch_speed = 2.0f;
     [SerializeField] float jump_power = 25.0f;
     [SerializeField] float crouch_threshhold = -0.65f;
+    [SerializeField] float attack_damage = 3.0f;
+    [SerializeField] float attack_2_damage = 5.0f;
 
     [SerializeField] Button attack_button;
     [SerializeField] Button jump_button;
@@ -59,12 +62,20 @@ public class KnightMovement_Joystick : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision) // Even though the Knight object itself has no triggers, it will catch child objects' trigger colliders.
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Debug.Log($"Knight hit the {collision.gameObject.name}!");
+        }
+    }
+
     public void SetJoystickInput(float x, float y)
     {
         // grab input from Joystick
         input_direction = new Vector3(x, y, 0).normalized;
 
-        // send input to AnimationController
+        // send input to Animator
         animator.SetFloat("JoystickX", input_direction.x);
         animator.SetFloat("JoystickY", input_direction.y);
 
@@ -114,6 +125,20 @@ public class KnightMovement_Joystick : MonoBehaviour
             animator.SetBool("is_falling", false);
         }
     }
+    private void Attack()
+    {
+        if (!is_attacking && !is_combo)
+        {
+            animator.SetTrigger("is_attacking");
+            is_attacking = true;
+            Debug.Log("Attack(): is_attacking = false;");
+        }
+        else if (is_attacking && !is_combo)
+        {
+            is_combo = true;
+            Debug.Log("Attack(): is_combo = true;");
+        }
+    }
 
     private void CheckCombo()
     {
@@ -130,20 +155,7 @@ public class KnightMovement_Joystick : MonoBehaviour
         }
     }
 
-    private void Attack()
-    {
-        if (!is_attacking)
-        {
-            animator.SetTrigger("is_attacking");
-            is_attacking = true;
-            Debug.Log("Attack(): is_attacking = false;");
-        }
-        else if (is_attacking)
-        {
-            is_combo = true;
-            Debug.Log("Attack(): is_combo = true;");
-        }
-    }
+
 
     private void ResetCombo()
     {
