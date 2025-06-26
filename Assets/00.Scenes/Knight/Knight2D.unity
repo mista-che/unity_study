@@ -993,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &670721773
 Animator:
   serializedVersion: 7
@@ -1170,8 +1170,6 @@ MonoBehaviour:
   crouch_threshhold: -0.5
   attack_damage: 3
   attack_2_damage: 5
-  attack_button: {fileID: 0}
-  jump_button: {fileID: 0}
 --- !u!1 &694310252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1500505085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,7 +1705,7 @@ Canvas:
   m_GameObject: {fileID: 1500505084}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1834024335}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1762,7 +1760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!70 &1651963089
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

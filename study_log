@@ -110,3 +110,16 @@
  - Used free pixel assets and TileMaps to create a town to walk around in.
  - Learned about Composite Colliders. Composite Colliders merge with Tilemap Colliders to create custom shapes that update with changes made to the tilemap.
  - Implemented our Joystick functions (crouch, attack) to our Keyboard knight.
+ 
+ 2025-06-26
+ - Added functionalities to the town map.
+  - Added KnightInteraction.cs and three types of objects that can be interacted with by approaching them.
+   - SIGN, NPC, and DOOR
+  - SIGN and NPC both bring up pop-up UI objects.
+   - SIGN implements a scrollable field of text using ScrollEvent.
+   - NPC implements a typewriter effect on the text using a coroutine.
+  - DOOR transitions the player character in and out of a house.
+   - Created a separate set of tilemaps for the inside of said house.
+   - Implemented Coroutines to toggle the map & house tilemaps on/off.
+   - Implemented Coroutines to use a fade in/out effect for the transition.
+   - Implemented hard-coded indoor/outdoor positions for the character to be teleported to, so that they don't accidentally trigger the collider again.
