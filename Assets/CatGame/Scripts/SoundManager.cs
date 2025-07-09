@@ -5,7 +5,7 @@ namespace CatGame // using namespaces here good because SoundManager tends to be
 {
     public class SoundManager : MonoBehaviour
     {
-        AudioSource audio_source;
+        public AudioSource audio_source;
         public AudioClip jump_clip;
         public AudioClip intro_clip;
         public AudioClip play_clip;

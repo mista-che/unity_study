@@ -6,6 +6,8 @@ namespace CatGame
 {
     public class UIManager : MonoBehaviour
     {
+        public GameController game_controller;
+
         public GameObject play_object;
         public GameObject play_screen;
 
@@ -30,7 +32,7 @@ namespace CatGame
         void Start()
         {
             start_button.onClick.AddListener(OnStartButton);
-            // restart_button.onClick.AddListener(OnRestartButton);
+            restart_button.onClick.AddListener(OnRestartButton);
         }
 
         public void OnStartButton()
@@ -54,9 +56,14 @@ namespace CatGame
 
         public void OnRestartButton()
         {
-            GameController.ResetPlayUI();
+            game_controller.ResetPlayUI();
+            GameController.is_playing = true;
+
             play_object.SetActive(true);
+            play_screen.SetActive(true);
             video_panel.SetActive(false);
+
+            sound_manager.SetBGMSound("Play");
         }
     }
 }

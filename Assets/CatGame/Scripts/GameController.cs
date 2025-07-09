@@ -13,7 +13,7 @@ namespace CatGame
         [SerializeField] private int fruit_score_value = 1;
         [SerializeField] private int win_condition_score = 10;
 
-        private static float timer = 0f;
+        [SerializeField] private float timer = 0f;
         private static int score = 0;
         public static bool is_playing;
 
@@ -24,15 +24,16 @@ namespace CatGame
 
         private void Update()
         {
-            if (!is_playing)
-                return;
-
-            timer += Time.deltaTime;
-            playtime_tmpro.text = $"Time: {timer}";
-            score_tmpro.text = $"{score}";
+            if (is_playing)
+            {
+                timer += Time.deltaTime;
+                playtime_tmpro.text = string.Format("Time: {0:F0}", timer);
+            }
+            if (score <= win_condition_score)
+                score_tmpro.text = $"{score}";
         }
 
-        public static void ResetPlayUI()
+        public void ResetPlayUI()
         {
             timer = 0f;
             score = 0;
